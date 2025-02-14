@@ -164,7 +164,7 @@ function App() {
               'Node.js',
               'Python',
               'HTML & CSS',
-              'Docker',
+              'Tailwind CSS',
               'PostgreSQL',
               'MongoDB',
               'GraphQL'
@@ -263,13 +263,13 @@ function App() {
   {[
     {
       title: 'Weather App',
-      description: 'A full-stack e-commerce solution built with Next.js and Stripe',
+      description: 'Stay prepared for any weather with weatherApp – your reliable, real-time weather companion!',
       image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80',
       link: 'https://delicate-florentine-a22957.netlify.app/', // Add the link here
     },
     {
       title: 'Website design',
-      description: 'A React-based project management tool with real-time updates',
+      description: 'A React-based project for wipros website ',
       image: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80',
       link: 'https://athinimbiko5.wixsite.com/wipro-3', // Add the link here
     },
@@ -278,6 +278,55 @@ function App() {
       description: 'A React-based project management tool with real-time updates',
       image: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80',
       link: 'https://adorable-sherbet-de7ead.netlify.app/', // Add the link here
+    }
+  ].map((project) => (
+    <div key={project.title} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+      <img 
+        src={project.image} 
+        alt={project.title}
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-6">
+        <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+        <p className="text-gray-600 mb-4">{project.description}</p>
+        <a 
+          href={project.link} // Use the link from the project object
+          className="inline-flex items-center text-blue-600 hover:text-blue-700"
+        >
+          View Project <ExternalLink size={16} className="ml-1" />
+        </a>
+      </div>
+    </div>
+  ))}
+          </div>
+        </div>
+      </section>
+      {/* Projects Section */}
+      <section id="projects" className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center gap-2 mb-8">
+            <Briefcase className="text-blue-600" size={24} />
+            <h2 className="text-3xl font-bold">Certification</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+  {[
+    {
+      title: 'Introduction to NoSQL Databases',
+      description: 'Stay prepared for any weather with weatherApp – your reliable, real-time weather companion!',
+      image: 'https://www.coursera.org/account/accomplishments/certificate/SCLEOW9KFXUE',
+      link: 'https://www.coursera.org/account/accomplishments/verify/SCLEOW9KFXUE', // Add the link here
+    },
+    {
+      title: 'Web Development',
+      description: 'Web development is the work involved in developing a Web site for the Internet or an intranet.',
+      image: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80',
+      link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-3b9802fe-a14b-4af8-87cb-5933a90b6fbf.pdf', // Add the link here
+    },
+    {
+      title: 'Artificial Intelligence Essentials V2',
+      description: 'The badge earner possesses the skills to harness AI, particularly generative AI, for career and business transformation',
+      image: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80',
+      link: 'https://www.credly.com/badges/9a7fc4fd-913c-43ec-9355-a5401fd8cbc6/linked_in_profile', // Add the link here
     }
   ].map((project) => (
     <div key={project.title} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
