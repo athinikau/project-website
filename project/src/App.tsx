@@ -303,54 +303,67 @@ function App() {
         </div>
       </section>
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4">
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <section id="certifications" className="py-20 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-2 mb-8">
-            <Briefcase className="text-blue-600" size={24} />
-            <h2 className="text-3xl font-bold">Certification</h2>
+            <GraduationCap className="text-blue-600" size={24} />
+            <h2 className="text-3xl font-bold">Certifications</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-  {[
-    {
-      title: 'Introduction to NoSQL Databases',
-      description: 'Stay prepared for any weather with weatherApp – your reliable, real-time weather companion!',
-      image: 'https://www.coursera.org/account/accomplishments/certificate/SCLEOW9KFXUE',
-      link: 'https://www.coursera.org/account/accomplishments/verify/SCLEOW9KFXUE', // Add the link here
-    },
-    {
-      title: 'Web Development',
-      description: 'Web development is the work involved in developing a Web site for the Internet or an intranet.',
-      image: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80',
-      link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-3b9802fe-a14b-4af8-87cb-5933a90b6fbf.pdf', // Add the link here
-    },
-    {
-      title: 'Artificial Intelligence Essentials V2',
-      description: 'The badge earner possesses the skills to harness AI, particularly generative AI, for career and business transformation',
-      image: 'https://www.credly.com/badges/9a7fc4fd-913c-43ec-9355-a5401fd8cbc6/linked_in_profile',
-      link: 'https://www.credly.com/badges/9a7fc4fd-913c-43ec-9355-a5401fd8cbc6/linked_in_profile', // Add the link here
-    }
-  ].map((project) => (
-    <div key={project.title} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-      <img 
-        src={project.image} 
-        alt={project.title}
-        className="w-full h-48 object-cover"
-      />
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-        <p className="text-gray-600 mb-4">{project.description}</p>
-        <a 
-          href={project.link} // Use the link from the project object
-          className="inline-flex items-center text-blue-600 hover:text-blue-700"
-        >
-          View Project <ExternalLink size={16} className="ml-1" />
-        </a>
-      </div>
-    </div>
-  ))}
+            {[
+              {
+                title: 'Introduction to NoSQL Databases',
+                issuer: 'Coursera',
+                description: 'Comprehensive understanding of NoSQL database concepts, architecture, and implementation.',
+                image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80',
+                link: 'https://www.coursera.org/account/accomplishments/verify/SCLEOW9KFXUE'
+              },
+              {
+                title: 'Web Development',
+                issuer: 'Udemy',
+                description: 'Advanced web development skills including modern frameworks and responsive design principles.',
+                image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80',
+                link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-3b9802fe-a14b-4af8-87cb-5933a90b6fbf.pdf'
+              },
+              {
+                title: 'Artificial Intelligence Essentials V2',
+                issuer: 'IBM',
+                description: 'Mastery in AI concepts, particularly generative AI, for business transformation.',
+                image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80',
+                link: 'https://www.credly.com/badges/9a7fc4fd-913c-43ec-9355-a5401fd8cbc6/linked_in_profile'
+              }
+            ].map((cert) => (
+              <div key={cert.title} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div className="relative">
+                  <img 
+                    src={cert.image} 
+                    alt={cert.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <div className="p-6">
+                  <div className="mb-4">
+                    <h3 className="text-xl font-semibold mb-1">{cert.title}</h3>
+                    <p className="text-blue-600 text-sm">{cert.issuer}</p>
+                  </div>
+                  <p className="text-gray-600 mb-4">{cert.description}</p>
+                  <a 
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                  >
+                    View Certificate <ExternalLink size={16} className="ml-1" />
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+    </div>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 bg-white">
