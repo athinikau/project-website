@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { Github, Linkedin, Mail, ExternalLink, Code2, Briefcase, User, ChevronDown, FileText, Download, Building, GraduationCap, Calendar, Menu, X, MapPin, Send } from 'lucide-react';
 
 function App() {
@@ -325,7 +326,7 @@ function App() {
     {
       title: 'Artificial Intelligence Essentials V2',
       description: 'The badge earner possesses the skills to harness AI, particularly generative AI, for career and business transformation',
-      image: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80',
+      image: 'https://www.credly.com/badges/9a7fc4fd-913c-43ec-9355-a5401fd8cbc6/linked_in_profile',
       link: 'https://www.credly.com/badges/9a7fc4fd-913c-43ec-9355-a5401fd8cbc6/linked_in_profile', // Add the link here
     }
   ].map((project) => (
